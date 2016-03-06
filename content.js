@@ -1,0 +1,1 @@
+module.exports = "It works from 1234567891011212313141516171819.js.";
