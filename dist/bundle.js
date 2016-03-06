@@ -44,13 +44,59 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(2)();
+	__webpack_require__(1)();
 
 
 
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $= __webpack_require__(2);
+	module.exports=function (){
+	    $(function () {
+	        var $container = $('<div id="app">');
+
+	        var $table= $('<table>');
+	        var size=8;
+
+	        for (var i=0; i<size; i++) {
+	            var $row= $('<tr>');
+	            for (var j=0; j<size; j++) {
+	                var $cell= $('<td>');
+	                $row.append($cell);
+	            }
+	            $table.append($row);
+	        }
+	        $container.append($table);
+	        $('body').append($container);
+	    });
+	};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ },
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -9884,19 +9930,6 @@
 
 	return jQuery;
 	}));
-
-
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $= __webpack_require__(1);
-	module.exports=function (){
-	    $(function () {
-	        $('body').append($('<div id="app">'));
-	    });
-	};
-
 
 
 /***/ }
